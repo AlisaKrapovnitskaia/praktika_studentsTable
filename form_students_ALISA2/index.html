@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица студентов</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/start.js" defer></script>
+</head>
+<body>
+    <h1>Добавление нового студента</h1>
+
+    <form id="studentForm">
+        <label for="firstname">Имя:</label>
+        <input type="text" id="firstname" required>
+        <span class="errorFirstname"></span>
+
+        <label for="lastname">Фамилия:</label>
+        <input type="text" id="lastname" required>
+        <span class="errorLastname"></span>
+
+        <label for="middleName">Отчество:</label>
+        <input type="text" id="middleName">
+
+        <label for="birthday">Дата рождения:</label>
+        <input type="date" id="birthday" required>
+        <span class="errorBirthday"></span>
+
+        <label for="startYear">Год начала обучения:</label>
+        <input type="number" id="startYear" min="2000" required>
+        <span class="errorStartYear"></span>
+
+        <label for="faculty">Факультет:</label>
+        <input type="text" id="faculty" required>
+        <span class="errorFaculty"></span>
+
+        <button id="Btn">Добавить студента</button>
+    </form>
+
+    <h2>Список студентов</h2>
+    <table id="studentsTable">
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Отчество</th>
+                <th>Дата рождения</th>
+                <th>Год начала обучения</th>
+                <th>Факультет</th>
+            </tr>
+        </thead>
+        <tbody id="studentsTableBody">
+        </tbody>
+    </table>
+</body>
+</html>
